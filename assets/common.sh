@@ -1,5 +1,6 @@
 LOG_FILE=${LOG_FILE:-/tmp/docker.log}
 SKIP_PRIVILEGED=${SKIP_PRIVILEGED:-false}
+export AWS_SDK_LOAD_CONFIG=true
 
 sanitize_cgroups() {
   mkdir -p /sys/fs/cgroup
