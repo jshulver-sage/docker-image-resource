@@ -1,5 +1,7 @@
 # Docker Image Resource
 
+This repo has been modified in order to allow use of instance profiles
+
 Tracks and builds [Docker](https://docker.io) images.
 
 Note: docker registry must be [v2](https://docs.docker.com/registry/spec/api/).
@@ -145,7 +147,7 @@ version is the image's digest.
   first pull `image:tag` from the Docker registry (so as to use cached
   intermediate images when building). This will cause the resource to fail
   if it is set to `true` and the image does not exist yet.
-  
+
 * `cache_tag`: *Optional.* Default `tag`. The specific tag to pull before
   building when `cache` parameter is set. Instead of pulling the same tag
   that's going to be built, this allows picking a different tag like
@@ -185,7 +187,7 @@ version is the image's digest.
   be tagged as `latest` in addition to whatever other tag was specified.
 
 * `build_args`: *Optional.*  A map of Docker build arguments.
-  
+
   Example:
 
   ```yaml
@@ -194,7 +196,7 @@ version is the image's digest.
     how_many_things: 2
     email: me@yopmail.com
   ```
-    
+
 * `build_args_file`: *Optional.* Path to a JSON file containing Docker build
   arguments.
 
